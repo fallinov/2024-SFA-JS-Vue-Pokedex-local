@@ -25,6 +25,7 @@ const protectedRoutes = [
 ]
 
 // Guardien (Guard) global pour vérifier l'authentification sur les routes spécifiques
+// Récupère la route demandée (to), la route précédente (from) et une fonction next pour continuer la navigation (ou pas)
 router.beforeEach((to, from, next) => {
   // Récupérer le magasin d'authentification
   const authStore = useAuthStore()
